@@ -16,7 +16,6 @@ import {
   Facebook,
   Twitter,
   Instagram,
-  Link as LinkIcon,
   Users as UsersIcon,
   Eye,
   Heart,

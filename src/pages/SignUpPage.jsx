@@ -23,7 +23,7 @@ export default function SignUpPage() {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
+  // const [success, setSuccess] = useState(""); // removed unused variable
 
   const navigate = useNavigate();
   const { setUser } = useAuth();
@@ -40,7 +40,7 @@ export default function SignUpPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    setSuccess("");
+    // setSuccess(""); // removed unused variable
     if (form.password !== form.confirmPassword) {
       setError("Passwords do not match");
       return;
@@ -320,19 +320,21 @@ export default function SignUpPage() {
                   className="ml-2 block text-sm text-gray-600"
                 >
                   I agree to the{" "}
-                  <a
-                    href="#"
-                    className="font-medium text-cyan-600 hover:text-cyan-500"
+                  <button
+                    type="button"
+                    className="font-medium text-cyan-600 hover:text-cyan-500 underline"
+                    onClick={() => alert("Show Terms of Service")}
                   >
                     Terms of Service
-                  </a>{" "}
+                  </button>{" "}
                   and{" "}
-                  <a
-                    href="#"
-                    className="font-medium text-cyan-600 hover:text-cyan-500"
+                  <button
+                    type="button"
+                    className="font-medium text-cyan-600 hover:text-cyan-500 underline"
+                    onClick={() => alert("Show Privacy Policy")}
                   >
                     Privacy Policy
-                  </a>
+                  </button>
                 </label>
               </div>
 

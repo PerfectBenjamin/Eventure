@@ -302,9 +302,9 @@ export default function CreateEventPage() {
         }
         formData.append("image", form.image);
         config.headers["Content-Type"] = "multipart/form-data";
-        response = await axios.post("/api/events/", formData, config);
+        await axios.post("/api/events/", formData, config);
       } else {
-        response = await axios.post("/api/events/", eventData, config);
+        await axios.post("/api/events/", eventData, config);
       }
       setSuccess("Event created successfully!");
       // Optionally redirect or reset form

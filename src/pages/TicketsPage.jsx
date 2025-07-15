@@ -56,7 +56,7 @@ import {
   TabsTrigger,
 } from "../components/ui/tabs";
 import DashboardLayout from "../features/dashboard/DashboardLayout";
-import { useRef, useCallback } from "react";
+import { useRef } from "react";
 import { Html5Qrcode } from "html5-qrcode";
 
 export default function TicketsPage() {
