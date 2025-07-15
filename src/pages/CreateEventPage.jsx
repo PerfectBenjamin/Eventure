@@ -277,7 +277,7 @@ export default function CreateEventPage() {
           Authorization: user?.token ? `Bearer ${user.token}` : undefined,
         },
       };
-      let response;
+      // let response;
       if (form.image) {
         const formData = new FormData();
         // Flatten nested fields for FormData
