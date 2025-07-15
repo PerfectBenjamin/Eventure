@@ -1,13 +1,6 @@
 import React from "react";
 import EventList from "../../components/EventList";
 import DashboardLayout from "./DashboardLayout";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "../../components/ui/card";
-import { Calendar, Users, Ticket, BarChart3 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const EventsPage = () => {

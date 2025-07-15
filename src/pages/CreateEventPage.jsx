@@ -115,9 +115,9 @@ export default function CreateEventPage() {
   };
 
   // Example for Date pickers
-  const handleDateChange = (date) => {
-    setForm((prev) => ({ ...prev, date }));
-  };
+  // const handleDateChange = (date) => {
+  //   setForm((prev) => ({ ...prev, date }));
+  // };
 
   // Example for file/image
   const handleImageChange = (e) => {

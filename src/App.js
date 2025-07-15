@@ -21,17 +21,6 @@ import EventDetailsPage from "./pages/EventDetailsPage";
 import EventsPage from "./features/dashboard/EventsPage";
 
 // Placeholder components for new routes
-const Settings = () => (
-  <DashboardLayoutWrapper>
-    <div className="p-6">
-      <h1 className="text-3xl font-bold mb-6">Settings</h1>
-      <p className="text-gray-600">
-        Manage your account settings and preferences.
-      </p>
-    </div>
-  </DashboardLayoutWrapper>
-);
-
 const AdminPanel = () => (
   <DashboardLayoutWrapper>
     <div className="p-6">
@@ -60,23 +49,6 @@ const SystemAnalytics = () => (
     </div>
   </DashboardLayoutWrapper>
 );
-
-function ProtectedRoute() {
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (!user) {
-      navigate("/sign-in", { replace: true });
-    } else {
-      if (user.role === "organizer") navigate("/", { replace: true });
-      else if (user.role === "attendee")
-        navigate("/browse-events", { replace: true });
-      else if (user.role === "admin") navigate("/admin", { replace: true });
-      else navigate("/sign-in", { replace: true });
-    }
-  }, [user, navigate]);
-  return null;
-}
 
 function App() {
   return (

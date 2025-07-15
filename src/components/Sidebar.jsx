@@ -11,10 +11,8 @@ import {
   Settings,
   Shield,
   Ticket,
-  User,
   Users,
   BarChart3,
-  Globe,
   Menu,
   X,
 } from "lucide-react";

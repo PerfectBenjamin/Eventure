@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   Calendar,
-  ChevronLeft,
   Eye,
   EyeOff,
   Mail,
@@ -25,7 +24,6 @@ export default function SignInPage() {
   const [form, setForm] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
   const navigate = useNavigate();
   const { setUser } = useAuth();
 
@@ -36,7 +34,6 @@ export default function SignInPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    setSuccess("");
     setLoading(true);
     try {
       const res = await axios.post("/users/login", {

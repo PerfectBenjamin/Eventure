@@ -87,7 +87,6 @@ export default function SettingsPage() {
     zip: "",
     country: "ng",
   });
-  const [success, setSuccess] = useState("");
 
   // Populate form fields when profile loads
   useEffect(() => {
